@@ -1,12 +1,10 @@
-class EvernoteAppPage
-  include LocatorModule
-  include GestureModule
-
-end
-
 module LocatorModule
   def selectTab(tab_name)
     selectByName(tab_name)
+  end
+
+  def selectById(id)
+    byId(id).click
   end
 
   def selectByName(name)
@@ -27,5 +25,12 @@ module LocatorModule
 end
 
 module GestureModule
+
+end
+
+
+class EvernoteAppPage
+  include LocatorModule
+  include GestureModule
 
 end
