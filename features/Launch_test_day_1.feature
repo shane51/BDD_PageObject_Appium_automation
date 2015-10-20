@@ -1,6 +1,6 @@
 Feature: Launch test
 
-  Scenario: Login with your account
+  Scenario: Launch test
 
-    Given I login evernote with "demo" account
+    Given I launch evernote
 
