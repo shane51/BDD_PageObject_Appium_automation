@@ -1,13 +1,27 @@
 Dir.glob(File.join(File.dirname(__FILE__), '..', '..', 'lib','**/*.rb')) {|file| require_relative file}
 
 
-module KnowsTheDomain
+module AndroidPageDomain
   def test_account
     json = File.read(File.join(File.dirname(__FILE__),'..', '..', 'test_data','test_account.json'))
     @account = JSON.parse(json)
   end
   def login_page
-    @loginPage = LoginPage.new
+    @loginPage = Screen::Android::LoginTab.new
+  end
+
+  def all_notes_page
+    @allNotesPage = Screen::Android::AllNotesPage.new
   end
 end
-World(KnowsTheDomain)
+
+module IosPageDomain
+  def test_account
+    json = File.read(File.join(File.dirname(__FILE__),'..', '..', 'test_data','test_account.json'))
+    @account = JSON.parse(json)
+  end
+  def login_page
+    @loginPage = Screen::IOS::LoginPage.new
+  end
+end
+World(AndroidPageDomain)
