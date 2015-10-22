@@ -2,7 +2,7 @@ module Screen
   module Android
     class LoginPage < EvernoteAppPage
       def skip_login_animation
-        sleep 5
+        sleep 10
       end
     end
 

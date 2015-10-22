@@ -3,10 +3,6 @@ module LocatorModule
     selectByName(tab_name)
   end
 
-  def selectById(id)
-    byId(id).click
-  end
-
   def selectByName(name)
     byName(name).click
   end
@@ -21,6 +17,10 @@ module LocatorModule
 
   def byId(id)
     find_element(:id, "#{id}")
+  end
+
+  def byXpath(xpath)
+    find_element(:xpath, "#{xpath}")
   end
 
   def verifyTextNotExist(content)

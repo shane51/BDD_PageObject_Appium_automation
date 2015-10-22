@@ -13,6 +13,10 @@ module AndroidPageDomain
   def all_notes_page
     @allNotesPage = Screen::Android::AllNotesPage.new
   end
+
+  def sidebar_menu
+    @sideBarMenu = Screen::Android::SidebarMenu.new
+  end
 end
 
 module IosPageDomain
