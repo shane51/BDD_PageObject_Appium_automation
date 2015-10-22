@@ -1,6 +1,9 @@
 #Todo List
 
- * 
+2015-10-22
+ * Add new feature scenario to involve sidebar and all note page
+ * Add setting page 
+ * Add create new text note scenario
  
 2015-10-21
  * ~~Split login page into two pages, register page and login page.~~
