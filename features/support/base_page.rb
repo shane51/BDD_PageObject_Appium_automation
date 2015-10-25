@@ -4,7 +4,7 @@ module LocatorModule
   end
 
   def selectByName(name)
-    byName(name).click
+    waitElement{byName(name).click}
   end
 
   def byName(name)
@@ -12,7 +12,7 @@ module LocatorModule
   end
 
   def selectById(id)
-    byId(id).click
+    waitElement {byId(id).click}
   end
 
   def byId(id)
@@ -41,11 +41,26 @@ module LocatorModule
     raise("Not find button: #{button_name}") unless exists { button(button_name) }
   end
 
+  def waitElement
+    timeout = 30
+    polling_interval = 0.2
+    time_limit = Time.now + timeout
+    loop do
+      begin
+        yield
+      rescue Exception => error
+      end
+      return if error.nil?
+      raise error if Time.now >= time_limit
+      sleep polling_interval
+    end
+  end
 end
 
 module GestureModule
 
 end
+
 
 
 class EvernoteAppPage

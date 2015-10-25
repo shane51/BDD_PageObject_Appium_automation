@@ -2,7 +2,44 @@ module Screen
   module Android
     class AllNotesPage < EvernoteAppPage
       def title
-       # byXpath("//*[@resource-id='com.evernote:id/toolbar']//*[@resource-id='com.evernote:id/title']")
+       byXpath("//*[@resource-id='com.evernote:id/toolbar']//*[@resource-id='com.evernote:id/title']")
+      end
+      def createTextNote
+        addNote("Text Note")
+      end
+
+      def addTextNoteTitle(note_title)
+        byName("Note Title").send_keys("#{note_title}")
+        #byId("title")
+      end
+
+      def addTextNoteContent(note_content)
+        byName("Compose your note").send_keys("#{note_content}")
+        #byId("text")
+      end
+
+      def saveNote
+        selectById("check_mark")
+      end
+
+      def addNote(option)
+        openAddIcon
+        selectOptions(option)
+      end
+
+      def openAddIcon
+        puts "addIcon is: #{addIconStatus}"
+        if addIconStatus == "closed"
+          selectById("main_fab_image_view")
+        end
+      end
+
+      def selectOptions(option)
+        selectByName(option)
+      end
+
+      def addIconStatus
+          "closed"
       end
     end
   end
