@@ -58,7 +58,56 @@ module LocatorModule
 end
 
 module GestureModule
+  def scrollHalfScreen(direction)
+    screenWidth = self.tag("android.widget.LinearLayout").size.width
+    screenHight = self.tag("android.widget.LinearLayout").size.height
 
+    case direction.downcase
+      when "down"
+        swipeOpts = {
+            :start_x => 0.5*screenWidth,
+            :start_y => 0.6*screenHight,
+            :end_x => 0.5*screenWidth,
+            :end_y => 0.1*screenHight,
+            :duration => 2000
+        }
+        self.swipe(swipeOpts)
+      when "up"
+        swipeOpts = {
+            :start_x => 0.5*screenWidth,
+            :start_y => 0.3*screenHight,
+            :end_x => 0.5*screenWidth,
+            :end_y => 0.8*screenHight,
+            :duration => 2000
+        }
+        self.swipe(swipeOpts)
+      when "right"
+        swipeOpts = {
+            :start_x => 0.5*screenWidth,
+            :start_y => 0.5*screenHight,
+            :end_x => 0.3*screenWidth,
+            :end_y => 0.5*screenHight,
+            :duration => 2000
+        }
+        self.swipe(swipeOpts)
+      when "left"
+        swipeOpts = {
+            :start_x => 0.5*screenWidth,
+            :start_y => 0.5*screenHight,
+            :end_x => 0.7*screenWidth,
+            :end_y => 0.5*screenHight,
+            :duration => 2000
+        }
+        self.swipe(swipeOpts)
+      else
+        puts "Unknown scroll direction."
+    end
+
+    def captureScreen(screenshot_name)
+      sleep 1
+      screenshot("Screenshots/"+ "#{screenshot_name}"+"_"+ "#{Time.now.strftime("%Y%m%dT%H%M%S")}" +".png")
+    end
+  end
 end
 
 

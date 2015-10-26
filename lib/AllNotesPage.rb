@@ -27,6 +27,8 @@ module Screen
         selectOptions(option)
       end
 
+      private
+
       def openAddIcon
         puts "addIcon is: #{addIconStatus}"
         if addIconStatus == "closed"

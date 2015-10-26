@@ -9,7 +9,6 @@ end
 When(/^I create new text note named "([^"]*)"$/) do |note_name|
   all_notes_page.createTextNote
   all_notes_page.addTextNoteTitle(note_name)
-
 end
 
 When(/^I add content "([^"]*)"$/) do |note_content|
