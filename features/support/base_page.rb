@@ -102,11 +102,12 @@ module GestureModule
       else
         puts "Unknown scroll direction."
     end
+  end
 
-    def captureScreen(screenshot_name)
-      sleep 1
-      screenshot("Screenshots/"+ "#{screenshot_name}"+"_"+ "#{Time.now.strftime("%Y%m%dT%H%M%S")}" +".png")
-    end
+  def captureScreen(screenshot_name)
+    sleep 1
+    #screenshot("Screenshots/"+ "#{Time.now.strftime("%Y%m%dT%H%M%S")}" + "_"+ "#{screenshot_name}"+".png")
+    screenshot("Screenshots/"+ "#{Time.now.to_i}" + "_"+ "#{screenshot_name}"+".png")
   end
 end
 
