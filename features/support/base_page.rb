@@ -102,6 +102,16 @@ module GestureModule
       else
         puts "Unknown scroll direction."
     end
+
+    def longPress(element)
+      longPressOpts = {
+          :element => element,
+          :x => 8,
+          :y => 8,
+          :duration => 2000
+      }
+      Appium::TouchAction.new.long_press(longPressOpts).perform
+    end
   end
 
   def captureScreen(screenshot_name)
@@ -109,6 +119,8 @@ module GestureModule
     #screenshot("Screenshots/"+ "#{Time.now.strftime("%Y%m%dT%H%M%S")}" + "_"+ "#{screenshot_name}"+".png")
     screenshot("Screenshots/"+ "#{Time.now.to_i}" + "_"+ "#{screenshot_name}"+".png")
   end
+
+
 end
 
 
@@ -116,5 +128,4 @@ end
 class EvernoteAppPage
   include LocatorModule
   include GestureModule
-
 end

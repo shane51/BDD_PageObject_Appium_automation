@@ -27,6 +27,20 @@ module Screen
         selectOptions(option)
       end
 
+      def deleteNote(note_name)
+        element = byName(note_name)
+        longPress(element)
+        longPressMenu("Delete")
+      end
+
+      def longPressMenu(option)
+        selectOptions(option)
+      end
+
+      def confirmAction
+        selectByName("OK")
+      end
+
       private
 
       def openAddIcon
