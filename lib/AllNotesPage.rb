@@ -88,8 +88,4 @@ end
 
   note title:
   xpath: //*[@resource-id='com.evernote:id/snippet_container']//*[@resource-id='com.evernote:id/title']
-
-
-
-
 =end

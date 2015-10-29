@@ -82,7 +82,7 @@ Tabs:
   - id: landing_password
   - id: landing_show_password
   - id: landing_disclaimer
-  - id: landing_register_button
+  - id: landing_register_button    (text: Start using Evernote)
 
 "SIGN IN" Tab
   - id: landing_username

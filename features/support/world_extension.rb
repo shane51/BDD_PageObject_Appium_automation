@@ -17,6 +17,10 @@ module AndroidPageDomain
   def sidebar_menu
     @sideBarMenu = Screen::Android::SidebarMenu.new
   end
+
+  def setting_page
+    @settingPage = Screen::Android::SettingPage.new
+  end
 end
 
 module IosPageDomain

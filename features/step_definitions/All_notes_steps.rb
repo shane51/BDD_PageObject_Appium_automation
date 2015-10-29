@@ -29,6 +29,7 @@ When(/^I confirm$/) do
   all_notes_page.confirmAction
 end
 
+
 Then(/^I should see note named "([^"]*)" in All Notes page$/) do |text|
   all_notes_page.verifyTextExist(text)
 end

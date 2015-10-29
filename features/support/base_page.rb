@@ -3,8 +3,12 @@ module LocatorModule
     selectByName(tab_name)
   end
 
+  def selectPanel(panel_name)
+    selectByName(panel_name)
+  end
+
   def selectByName(name)
-    waitElement{byName(name).click}
+    waitElement{ byName(name).click }
   end
 
   def byName(name)
@@ -34,13 +38,19 @@ module LocatorModule
 
 
   def verifyButtonNotExist(button_name)
-    raise("Not find button: #{button_name}") if exists { button(button_name) }
+    raise("find button: #{button_name}") if exists { button(button_name) }
   end
 
   def verifyButtonExist(button_name)
     raise("Not find button: #{button_name}") unless exists { button(button_name) }
   end
+  def verifyItemNotExistById(item_id)
+    waitElement { raise("find button: #{item_id}") if exists { byId(item_id) } }
+  end
 
+  def verifyItemExistById(item_id)
+    waitElement { raise("Not find item: #{item_id}") unless exists { byId(item_id) } }
+  end
   def waitElement
     timeout = 30
     polling_interval = 0.2

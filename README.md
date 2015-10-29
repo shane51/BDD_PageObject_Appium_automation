@@ -1,7 +1,10 @@
 #Todo List
+2015-10-29
+
+ * Extract assert method into seperate module, then refactor them, add more assertions
 
 2015-10-27
- * Add setting page 
+ * ~~Add setting page~~
  
 2015-10-26
  * ~~Add delete newly add note scenarios~~
@@ -32,7 +35,7 @@
      * ~~create ios and android module~~
 4. ~~分析Evernote的页面元素，创建基础页面类~~
 5. ~~创建SideBar类~~
-6. 更多的页面
+6. ~~更多的页面~~
 7. ~~创建手势方法（上下左右滑动， 长按）~~
-8. 加入iOS支持
+8. ~~加入iOS支持~~(doesn't have evernote ipa, so IOS is not supported)
 9. 重构
