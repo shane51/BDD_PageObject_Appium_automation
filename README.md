@@ -1,3 +1,13 @@
+#Environment Setup
+##Detailed guide(详细教程)
+ 1. [Appium guide](https://github.com/hy1984427/appium/blob/master/SUMMARY.md)
+ 2. [BBD with Page Object Guide](https://github.com/hy1984427/BDD-with-PageObject/blob/master/SUMMARY.md)
+ 
+##How to setup
+######1. Ensure Appium is installed and configured that appium inspector can launch android app, please refer to [Appium guide](https://github.com/hy1984427/appium/blob/master/SUMMARY.md)
+######2. Installed cucumber and appium lib for ruby
+`bundle install`
+
 #Todo List
 2015-10-29
 

@@ -1,22 +1,6 @@
 module Screen
   module Android
     class LoginPage < EvernoteApp
-      def login(account)
-        p account
-        raise("account not exists") if account.empty?
-        username = account["username"]
-        password = account["password"]
-        loginAs(username,password)
-      end
-
-      def loginAs(username,password)
-        selectTab("SIGN IN")
-        set_login_email(username)
-        set_login_password(password)
-        sign_in
-        puts "Log in..."
-      end
-
       def set_login_email(username)
         byId("landing_username").send_keys("#{username}")
       end
@@ -36,22 +20,6 @@ end
 module Screen
   module IOS
     class LoginPage < EvernoteApp
-        def login(account)
-          p account
-          raise("account not exists") if account.empty?
-          username = account["username"]
-          password = account["password"]
-          loginAs(username,password)
-        end
-
-        def loginAs(username,password)
-          selectLink("Sign in")
-          set_login_email(username)
-          set_login_password(password)
-          sign_in
-          puts "Log in..."
-        end
-
         def set_login_email(username)
           textfield('Username').send_keys("#{username}")
         end
