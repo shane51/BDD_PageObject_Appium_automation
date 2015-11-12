@@ -1,4 +1,7 @@
 #Environment Setup
+**Samsung phone cannot support this demo code**, it has evernote pre-installed, and cannot uninstall
+**Cannot support Android 6.0**
+**Demo is recorded on Sony Z2 with Android 4.4.2**
 ##Detailed guide(详细教程)
  1. [Appium guide](https://github.com/hy1984427/appium/blob/master/SUMMARY.md)
  2. [BBD with Page Object Guide](https://github.com/hy1984427/BDD-with-PageObject/blob/master/SUMMARY.md)
