@@ -5,7 +5,7 @@
  
 ##How to setup
 ######1. Ensure Appium is installed and configured that appium inspector can launch android app, please refer to [Appium guide](https://github.com/hy1984427/appium/blob/master/SUMMARY.md)
-######2. Installed cucumber and appium lib for ruby
+######2. Install cucumber and appium lib for ruby
 `bundle install`
 
 #Todo List
