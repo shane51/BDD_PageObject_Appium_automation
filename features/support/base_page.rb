@@ -12,7 +12,7 @@ module LocatorModule
   end
 
   def byName(name)
-    find_element(:name, "#{name}")
+    text("#{name}")
   end
 
   def selectById(id)
@@ -28,12 +28,12 @@ module LocatorModule
   end
 
   def verifyTextNotExist(content)
-    raise("Should not find text: #{content}") unless texts(content).empty?
+    waitElement{ raise("Should not find text: #{content}") unless texts(content).empty? }
   end
 
   def verifyTextExist(content)
     #sleep 5
-    raise("Not find text: #{content}") if texts(content).empty?
+    waitElement{  raise("Not find text: #{content}") if  texts(content).empty? }
   end
 
 
@@ -52,7 +52,7 @@ module LocatorModule
     waitElement { raise("Not find item: #{item_id}") unless exists { byId(item_id) } }
   end
   def waitElement
-    timeout = 30
+    timeout = 60
     polling_interval = 0.2
     time_limit = Time.now + timeout
     loop do
