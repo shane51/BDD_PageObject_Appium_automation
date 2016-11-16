@@ -14,17 +14,32 @@ demo是使用 Sony Z2 with Android 4.4.2
    - [下载并安装MAC版 appium GUI](https://bitbucket.org/appium/appium.app/downloads/appium-1.5.3.dmg)
    - 使用homebrew安装最新的android SDK `brew install android-sdk`
    - 添加android环境变量
+   
         `$ vi ~/.bash_profile`
+        
         添加：
+        
         export ANDROID_HOME=/Users/xxxx/Library/Android/sdk
+        
         export PATH=$ANDROID_HOME/platform-tools:$PATH
+        
         export PATH=$ANDROID_HOME/tools:$PATH
+        
         然后执行：
+        
         `$ source ~/.bash_profile`
+        
         
    
 ######2. 安装Appium_lib 与 cucumber
-  确保Ruby已安装，推荐2.1.5版本。然后执行:
+
+  确保Ruby已安装，推荐2.1.5版本。
+  将代码clone到本地
+  
+  `cd BDD_PageObject_Appium_automation`
+  
+  然后执行:
+
  `bundle install`
  
 ####Tasks list
