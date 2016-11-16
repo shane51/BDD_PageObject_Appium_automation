@@ -15,9 +15,9 @@ demo是使用 Sony Z2 with Android 4.4.2
    - 使用homebrew安装最新的android SDK `brew install android-sdk`
    - 添加android环境变量
    
-        `$ vi ~/.bash_profile`
+    `$ vi ~/.bash_profile`
         
-        添加：
+    添加：
         
         export ANDROID_HOME=/Users/xxxx/Library/Android/sdk
         
@@ -25,9 +25,9 @@ demo是使用 Sony Z2 with Android 4.4.2
         
         export PATH=$ANDROID_HOME/tools:$PATH
         
-        然后执行：
+     然后执行：
         
-        `$ source ~/.bash_profile`
+    `$ source ~/.bash_profile`
         
         
    
@@ -41,6 +41,8 @@ demo是使用 Sony Z2 with Android 4.4.2
   然后执行:
 
  `bundle install`
+ 
+ *如果安装失败*，手动删除Gemfile.lock文件，重新执行`bundle install`
  
 ####Tasks list
 1. ~~搭建自动化工程（Cucumber， PageObject， Appium 配置）~~
