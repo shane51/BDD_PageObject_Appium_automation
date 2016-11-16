@@ -1,7 +1,10 @@
 #环境设置
-**三星国行手机可能不能支持**, 三星国行手机内置了evernote，无法卸载，导致Appium不能安装evernote。
-**由于第一，Evernote程序比较大；第二，Evernote需要Arm的lib，模拟器会不能工作，或者非常慢，推荐使用真机**
-**demo是使用 Sony Z2 with Android 4.4.2**
+**可能不支持三星国行手机**, 三星国行手机内置了evernote，无法卸载，导致Appium不能安装evernote。
+
+由于第一，Evernote程序比较大；第二，Evernote需要Arm的lib，模拟器可能会不工作，或者非常慢，**推荐使用真机**
+
+demo是使用 Sony Z2 with Android 4.4.2
+
 ##详细教程
  1. [Appium guide](https://github.com/hy1984427/appium/blob/master/SUMMARY.md)
  2. [BBD with Page Object Guide](https://github.com/hy1984427/BDD-with-PageObject/blob/master/SUMMARY.md)
