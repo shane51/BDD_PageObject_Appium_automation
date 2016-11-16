@@ -1,5 +1,5 @@
 #Environment Setup
-**Samsung phone cannot support this demo code**, it has evernote pre-installed, and cannot uninstall
+**Samsung phone cannot support this demo code**, it has evernote pre-installed, and cannot be uninstalled
 **Cannot support Android 6.0**
 **Demo is recorded on Sony Z2 with Android 4.4.2**
 ##Detailed guide(详细教程)

@@ -1,4 +1,5 @@
 module LocatorModule
+  #Todo: need to refactor wait mechanism from poll action to poll element exist
   def selectTab(tab_name)
     selectByName(tab_name)
   end
@@ -126,7 +127,6 @@ module GestureModule
 
   def captureScreen(screenshot_name)
     sleep 1
-    #screenshot("Screenshots/"+ "#{Time.now.strftime("%Y%m%dT%H%M%S")}" + "_"+ "#{screenshot_name}"+".png")
     screenshot("Screenshots/"+ "#{Time.now.to_i}" + "_"+ "#{screenshot_name}"+".png")
   end
 
